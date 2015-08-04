@@ -6,17 +6,31 @@
 \contentsline {subsection}{\numberline {1.1}Inserindo c\IeC {\'o}digo fonte}{4}{subsection.0.1.1}
 \contentsline {subsection}{\numberline {1.2}Figuras}{4}{subsection.0.1.2}
 \contentsline {subsection}{\numberline {1.3}Apresentando aquisi\IeC {\c c}\IeC {\~o}es}{4}{subsection.0.1.3}
-\contentsline {subsection}{\numberline {1.4}Margens}{4}{subsection.0.1.4}
-\contentsline {subsection}{\numberline {1.5}Duas colunas}{6}{subsection.0.1.5}
-\contentsline {subsection}{\numberline {1.6}Recuo do ambiente \texttt {citacao}}{6}{subsection.0.1.6}
-\contentsline {section}{\numberline {2}Cabe\IeC {\c c}alhos e rodap\IeC {\'e}s customizados}{6}{section.0.2}
-\contentsline {section}{\numberline {3}Mais exemplos no Modelo Can\IeC {\^o}nico de Trabalhos Acad\IeC {\^e}micos}{7}{section.0.3}
-\contentsline {section}{\numberline {4}Consulte o manual da classe \textsf {abntex2}}{8}{section.0.4}
-\contentsline {section}{Considera\IeC {\c c}\IeC {\~o}es finais}{8}{section*.6}
+\contentsline {section}{\numberline {2}Axiomas ou postulados}{6}{section.0.2}
+\contentsline {section}{\numberline {3}Teorema}{6}{section.0.3}
+\contentsline {subsection}{\numberline {3.1}Terminologia}{6}{subsection.0.3.1}
+\contentsline {subsection}{\numberline {3.2}Conjectura ou hip\IeC {\'o}tese}{7}{subsection.0.3.2}
+\contentsline {subsection}{\numberline {3.3}Lema}{7}{subsection.0.3.3}
+\contentsline {subsection}{\numberline {3.4}Recuo do ambiente \texttt {citacao}}{8}{subsection.0.3.4}
+\contentsline {section}{\numberline {4}Mais exemplos no Modelo Can\IeC {\^o}nico de Trabalhos Acad\IeC {\^e}micos}{9}{section.0.4}
+\contentsline {section}{\numberline {5}Consulte o manual da classe \textsf {abntex2}}{9}{section.0.5}
+\contentsline {section}{Considera\IeC {\c c}\IeC {\~o}es finais}{9}{section*.6}
 \vspace {\cftbeforepartskip }
+\contentsline {chapter}{Refer\^encias}{11}{section*.9}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
-\contentsline {appendix}{\chapternumberline {A}Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula ac pretium ante justo a nulla curabitur tristique arcu eu metus}{9}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}Rela\IeC {\c c}\IeC {\~o}es Trigonom\IeC {\'e}tricas}{12}{appendix.A}
+\contentsline {section}{\numberline {1}Deslocamentos Angulares}{12}{section.A.1}
+\contentsline {subsection}{\numberline {1.1}Deslocamento de 90 graus}{12}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {1.2}Deslocamento de 180 graus}{12}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {1.3}Deslocamento de 360 graus}{12}{subsection.A.1.3}
+\contentsline {section}{\numberline {2}Rela\IeC {\c c}\IeC {\~o}es de soma e subtra\IeC {\c c}\IeC {\~a}o}{13}{section.A.2}
+\contentsline {section}{\numberline {3}\IeC {\^A}ngulo duplo}{13}{section.A.3}
+\contentsline {section}{\numberline {4}\IeC {\^A}ngulo Triplo}{13}{section.A.4}
+\contentsline {section}{\numberline {5}Meio \IeC {\^a}ngulo}{14}{section.A.5}
+\contentsline {section}{\numberline {6}Redu\IeC {\c c}\IeC {\~a}o de Pot\IeC {\^e}ncia}{14}{section.A.6}
+\contentsline {section}{\numberline {7}Produto para soma}{15}{section.A.7}
+\contentsline {section}{\numberline {8}Soma para Produto}{15}{section.A.8}
 \cftinsert {AAA}
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
-\contentsline {appendix}{\chapternumberline {A}Datasheet para o conjunto inversor monof\IeC {\'a}sico SPCIM 450-60-20}{10}{appendix.anexochapback.1}
+\contentsline {appendix}{\chapternumberline {A}Datasheet para o conjunto inversor monof\IeC {\'a}sico SPCIM 450-60-20}{16}{appendix.anexochapback.1}

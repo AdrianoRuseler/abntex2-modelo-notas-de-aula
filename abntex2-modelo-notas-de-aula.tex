@@ -30,8 +30,8 @@
 \documentclass[
 	% -- opções da classe memoir --
 	article,			% indica que é um artigo acadêmico
-	11pt,				% tamanho da fonte
-	oneside,			% para impressão apenas no verso. Oposto a twoside
+	12pt,				% tamanho da fonte
+	twoside,			% para impressão apenas no verso. Oposto a twoside
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
@@ -87,6 +87,20 @@
 \usepackage{tikz,pgfplots}
 \usepackage{pdfpages}
 \usepackage{longtable}
+
+
+% ---
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\DeclareMathOperator{\deriv}{d}		
+
+
+
+\newcounter{NumberInTable}
+\newcommand{\LTNUM}{\stepcounter{NumberInTable}{(\theNumberInTable)}}
+
+\newcommand{\Laplace}[1]{\ensuremath{\mathcal{L}{\left[#1\right]}}}
+\newcommand{\InvLap}[1]{\ensuremath{\mathcal{L}^{-1}{\left[#1\right]}}}
+
 
 
 % Definição de cores
@@ -200,14 +214,14 @@
      	%pagebackref=true,
 		pdftitle={\@title}, 
 		pdfauthor={\@author},
-    	pdfsubject={Modelo de artigo científico com abnTeX2},
+    	pdfsubject={Modelo de Notas de Aulas com abnTeX2},
 	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{atigo científico}, 
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{notas de aula}, 
 		colorlinks=true,       		% false: boxed links; true: colored links
-    	linkcolor=blue,          	% color of internal links
-    	citecolor=blue,        		% color of links to bibliography
-    	filecolor=magenta,      		% color of file links
-		urlcolor=blue,
+    	linkcolor=black,          	% color of internal links
+    	citecolor=black,        		% color of links to bibliography
+    	filecolor=black,      		% color of file links
+		urlcolor=black,
 		bookmarksdepth=4
 }
 \makeatother
@@ -400,50 +414,130 @@ state=fi(bin2dec(binstates),0,nbits,0); % Objeto numérico de ponto-fixo
 	\end{minipage}	
 \end{figure}
 
+\clearpage
+\section{Axiomas ou postulados}
 
-\subsection{Margens}
+Na lógica tradicional, um axioma ou postulado é uma sentença ou proposição que não é provada ou demonstrada e é considerada como óbvia ou como um consenso inicial necessário para a construção ou aceitação de uma teoria. Por essa razão, é aceito como verdade e serve como ponto inicial para dedução e inferências de outras verdades (dependentes de teoria).
 
-A norma ABNT NBR 6022:2003 não estabelece uma margem específica a ser utilizada
-no artigo científico. Dessa maneira, caso deseje alterar as margens, utilize os
-comandos abaixo:
 
-\begin{verbatim}
-   \setlrmarginsandblock{3cm}{3cm}{*}
-   \setulmarginsandblock{3cm}{3cm}{*}
-   \checkandfixthelayout
-\end{verbatim}
+Na matemática, um axioma é uma hipótese inicial de qual outros enunciados são logicamente derivados. Pode ser uma sentença, uma proposição, um enunciado ou uma regra que permite a construção de um sistema formal. Diferentemente de teoremas, axiomas não podem ser derivados por princípios de dedução e nem são demonstráveis por derivações formais, simplesmente porque eles são hipóteses iniciais. Isto é, não há mais nada a partir do que eles seguem logicamente (em caso contrário eles seriam chamados teoremas). Em muitos contextos, "axioma", "postulado" e "hipótese" são usados como sinônimos.
 
-\subsection{Duas colunas}
 
-É comum que artigos científicos sejam escritos em duas colunas. Para isso,
-adicione a opção \texttt{twocolumn} à classe do documento, como no exemplo:
+\begin{axioma}[Axioma de Igualdade]
+	Supondo $\mathfrak{L}$, uma linguagem de primeira ordem. para cada variável $x$, a fórmula $x = x$ é universalmente válida.
+\end{axioma}
 
-\begin{verbatim}
-   \documentclass[article,11pt,oneside,a4paper,twocolumn]{abntex2}
-\end{verbatim}
 
-É possível indicar pontos do texto que se deseja manter em apenas uma coluna,
-geralmente o título e os resumos. Os resumos em única coluna em documentos com
-a opção \texttt{twocolumn} devem ser escritos no ambiente
-\texttt{resumoumacoluna}:
+\begin{postulado}[Postulado de Igualdade]
+	Supondo $\mathfrak{L}$, uma linguagem de primeira ordem. para cada variável $x$, a fórmula $x = x$ é universalmente válida.
+\end{postulado}
 
-\begin{verbatim}
-   \twocolumn[              % INICIO DE ARTIGO EM DUAS COLUNAS
 
-     \maketitle             % pagina de titulo
+\section{Teorema}
 
-     \renewcommand{\resumoname}{Nome do resumo}
-     \begin{resumoumacoluna}
-        Texto do resumo.
-      
-        \vspace{\onelineskip}
- 
-        \noindent
-        \textbf{Palavras-chave}: latex. abntex. editoração de texto.
-     \end{resumoumacoluna}
-   
-   ]                        % FIM DE ARTIGO EM DUAS COLUNAS
-\end{verbatim}
+
+Na matemática, um teorema é uma afirmação que pode ser provada como verdadeira através de outras afirmações já demonstradas, como outros teoremas, juntamente com afirmações anteriormente aceitas, como axiomas. Prova é o processo de mostrar que um teorema está correto. O termo teorema foi introduzido por Euclides, em Elementos, para significar "afirmação que pode ser provada". Em grego, originalmente significava "espetáculo" ou "festa". Atualmente, é mais comum deixar o termo "teorema" apenas para certas afirmações que podem ser provadas e de grande "importância matemática", o que torna a definição um tanto subjetiva.
+
+\begin{teorema}[Teorema de Pitágoras]
+	Em qualquer triângulo retângulo, o quadrado do comprimento da hipotenusa é igual à soma dos quadrados dos comprimentos dos catetos. 
+\end{teorema}
+
+
+\subsection{Terminologia}
+
+
+
+Usualmente deixa-se o termo ``teorema'' apenas para as afirmações que podem ser provadas de grande importância. Assim, são dados outros nomes para os outros tipos dessas afirmações:
+
+\begin{description}
+	\item[Proposição:] Uma Proposição é uma sentença não associada a algum outro teorema, de simples prova e de importância matemática menor.
+	\item[Lema:] Um Lema é um "pré-teorema", um teorema que serve para ajudar na prova de outro teorema maior. A distinção entre teoremas e lemas é um tanto quanto arbitrária, uma vez que grandes resultados são usados para provar outros. Por exemplo, o Lema de Gauss e o Lema de Zorn são muito interessantes de per se, e muitos autores os denominam de Lemas, mesmo que não os usem para provar alguma outra coisa.
+	\item[Corolário:] Um Corolário é uma consequência direta de outro teorema ou de uma definição, muitas vezes tendo suas demonstrações omitidas, por serem simples.
+\end{description}
+
+
+\begin{corolario}
+	Em qualquer triângulo retângulo, a hipotenusa é maior que qualquer um dos catetos, mas menor que a soma deles.
+\end{corolario}
+
+Alguns outros termos também são usados, por mais que raros e com definição menos rigorosa, basicamente sendo usadas quando não se quer usar a a palavra "teorema":
+
+Regra.
+Lei, que também pode se referir a axiomas, regras de dedução e a distribuições de Probabilidade.
+Princípio.
+Algoritmo (como em Algoritmo da Divisão), muito raro e diferente do conceito com o mesmo nome que é um dos estudos centrais da Ciência da Computação.
+Paradoxo, usado quando a afirmação vai aparentemente de encontro com alguma outra verdade ou com alguma noção intuitiva. Entretanto, tal termo também pode ser usado para afirmações falsas que aparentem ser verdadeiras em um primeiro momento.
+
+Alguns teoremas continuam a ser chamados de Conjecturas logo após serem provados (por exemplo, a Conjectura de Poincaré). O termo conjectura é usado para afirmações que não se sabe se são verdadeiras, e que acredita-se que são verdadeiras, mas nunca ninguém conseguiu prová-las nem negá-las (às vezes conjecturas são chamadas de hipóteses (como em Hipótese de Riemann), obviamente, num sentido diferente do aqui já descrito).
+
+
+\subsection{Conjectura ou hipótese}
+
+Uma conjectura é uma ideia, fórmula ou frase, a qual não foi provada ser verdadeira, baseada em suposições ou ideias com fundamento não verificado. As conjecturas utilizadas como prova de resultados matemáticos recebem o nome de hipóteses.
+
+
+
+\begin{conjectura}[Conjectura dos primos gêmeos]	
+	Existem infinitos números primos gêmeos.
+\end{conjectura}
+
+Um par de primos é chamado de primos gêmeos se eles são dois números primos $p$, $q$ tais que $q = p + 2$.
+
+
+
+\subsection{Lema}
+
+Na Matemática, um lema é um teorema que é usado como um passo intermediário para atingir um resultado maior, provado em outro teorema. Normalmente o lema tem pouca serventia além de servir ao propósito do teorema que o utiliza, mas isto não é uma regra, e a classificação entre lemas e teoremas é arbitrária\footnote{Wikipédia}.
+
+
+\begin{lema}	
+	Given two line segments whose lengths are $a$ and $b$ respectively there is a 
+	real number $r$ such that $b=ra$.
+\end{lema}
+
+
+
+Unnumbered theorem-like environments are also possible.
+
+\begin{observacao}
+	This statement is true, I guess.
+\end{observacao}
+
+And the next is a somewhat informal definition
+
+
+\begin{definicao}[Fibration]
+	A fibration is a mapping between two topological spaces that has the homotopy lifting property for every space $X$.
+\end{definicao}
+
+\begin{exemplo}[Fibration]
+	A fibration is a mapping between two topological spaces that has the homotopy lifting property for every space $X$.
+\end{exemplo}
+
+
+\begin{exercicio}
+	Este é um exercício
+	
+\end{exercicio}
+
+\begin{exercicio}
+	Mais um exercício para vocês...
+	
+\end{exercicio}
+
+
+\begin{condicao}[Fibration]
+	A fibration is a mapping between two topological spaces that has the homotopy lifting property for every space $X$.
+\end{condicao}
+Theorem styles
+
+\begin{description}
+	\item[definition] boldface title, romand body. Commonly used in definitions, conditions, problems and examples.
+	\item[plain] boldface title, italicized body. Commonly used in theorems, lemmas, corollaries, propositions and conjectures.
+	\item[remark] italicized title, romman body. Commonly used in remarks, notes, annotations, claims, cases, acknowledgments and conclusions. 
+\end{description}
+
+
 
 \subsection{Recuo do ambiente \texttt{citacao}}
 
@@ -458,66 +552,6 @@ Quando um documento é produzido com a opção \texttt{twocolumn}, a classe
 \textsf{abntex2} automaticamente altera o recuo padrão de 4 cm, definido pela
 ABNT NBR 10520:2002 seção 5.3, para 1.8 cm.
 
-\section{Cabeçalhos e rodapés customizados}
-
-Diferentes estilos de cabeçalhos e rodapés podem ser criados usando os
-recursos padrões do \textsf{memoir}.
-
-Um estilo próprio de cabeçalhos e rodapés pode ser diferente para páginas pares
-e ímpares. Observe que a diferenciação entre páginas pares e ímpares só é
-utilizada se a opção \texttt{twoside} da classe \textsf{abntex2} for utilizado.
-Caso contrário, apenas o cabeçalho padrão da página par (\emph{even}) é usado.
-
-Veja o exemplo abaixo cria um estilo chamado \texttt{meuestilo}. O código deve
-ser inserido no preâmbulo do documento.
-
-\begin{verbatim}
-%%criar um novo estilo de cabeçalhos e rodapés
-\makepagestyle{meuestilo}
-  %%cabeçalhos
-  \makeevenhead{meuestilo} %%pagina par
-     {topo par à esquerda}
-     {centro \thepage}
-     {direita}
-  \makeoddhead{meuestilo} %%pagina ímpar ou com oneside
-     {topo ímpar/oneside à esquerda}
-     {centro\thepage}
-     {direita}
-  \makeheadrule{meuestilo}{\textwidth}{\normalrulethickness} %linha
-  %% rodapé
-  \makeevenfoot{meuestilo}
-     {rodapé par à esquerda} %%pagina par
-     {centro \thepage}
-     {direita} 
-  \makeoddfoot{meuestilo} %%pagina ímpar ou com oneside
-     {rodapé ímpar/onside à esquerda}
-     {centro \thepage}
-     {direita}
-\end{verbatim}
-
-Para usar o estilo criado, use o comando abaixo imediatamente após um dos
-comandos de divisão do documento. Por exemplo:
-
-\begin{verbatim}
-   \begin{document}
-     %%usar o estilo criado na primeira página do artigo:
-     \pretextual
-     \pagestyle{meuestilo}
-     
-     \maketitle
-     ...
-     
-     %%usar o estilo criado nas páginas textuais
-     \textual
-     \pagestyle{meuestilo}
-     
-     \chapter{Novo capítulo}
-     ...
-   \end{document}  
-\end{verbatim}
-   
-Outras informações sobre cabeçalhos e rodapés estão disponíveis na seção 7.3 do
-manual do \textsf{memoir} \cite{memoir}.
 
 \section{Mais exemplos no Modelo Canônico de Trabalhos Acadêmicos}
 
@@ -558,7 +592,7 @@ referência completa das macros e ambientes disponíveis.
 % ELEMENTOS PÓS-TEXTUAIS
 % ----------------------------------------------------------
 \postextual
-\pagestyle{plain}
+
 
 % ---
 % Título e resumo em língua estrangeira
@@ -572,7 +606,8 @@ referência completa das macros e ambientes disponíveis.
 % ---
 
 \newpage
-\pagestyle{notasUFSC}
+\pagestyle{plain}
+%
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
@@ -592,17 +627,138 @@ referência completa das macros e ambientes disponíveis.
 % ----------------------------------------------------------
 
 \newpage
-
+\pagestyle{notasUFSC}
 % ---
 % Inicia os apêndices
 % ---
 \begin{apendicesenv}
 
-% ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% ----------------------------------------------------------
-\lipsum[55-57]
+% ---
+\chapter{Relações Trigonométricas}
+% ---
+
+\section{Deslocamentos Angulares}
+\subsection{Deslocamento de 90 graus}
+\begin{eqnarray}
+\sin(\theta + \tfrac{\pi}{2}) &= +\cos \theta \\
+\cos(\theta + \tfrac{\pi}{2}) &= -\sin \theta \\
+\tan(\theta + \tfrac{\pi}{2}) &= -\cot \theta \\
+\csc(\theta + \tfrac{\pi}{2}) &= +\sec \theta \\
+\sec(\theta + \tfrac{\pi}{2}) &= -\csc \theta \\
+\cot(\theta + \tfrac{\pi}{2}) &= -\tan \theta
+\end{eqnarray}
+
+\subsection{Deslocamento de 180 graus}
+\begin{eqnarray}
+\sin(\theta + \pi) &= -\sin \theta \\
+\cos(\theta + \pi) &= -\cos \theta \\
+\tan(\theta + \pi) &= +\tan \theta \\
+\csc(\theta + \pi) &= -\csc \theta \\
+\sec(\theta + \pi) &= -\sec \theta \\
+\cot(\theta + \pi) &= +\cot \theta 
+\end{eqnarray}
+
+\subsection{Deslocamento de 360 graus}
+\begin{eqnarray}
+\sin(\theta + 2\pi) &= +\sin \theta \\
+\cos(\theta + 2\pi) &= +\cos \theta \\
+\tan(\theta + 2\pi) &= +\tan \theta \\
+\csc(\theta + 2\pi) &= +\csc \theta \\
+\sec(\theta + 2\pi) &= +\sec \theta \\
+\cot(\theta + 2\pi) &= +\cot \theta
+\end{eqnarray}
+
+
+
+
+\section{Relações de soma e subtração}
+
+\begin{eqnarray}
+\sin(\alpha \pm \beta) & =& \sin \alpha \cos \beta \pm \cos \alpha \sin \beta \\
+\cos(\alpha \pm \beta) & =& \cos \alpha \cos \beta \mp \sin \alpha \sin \beta \\
+\tan(\alpha \pm \beta) &= &\frac{\tan \alpha \pm \tan \beta}{1 \mp \tan \alpha \tan \beta}\\
+\arcsin\alpha \pm \arcsin\beta &=& \arcsin\left(\alpha\sqrt{1-\beta^2} \pm \beta\sqrt{1-\alpha^2}\right)\\
+\arccos\alpha \pm \arccos\beta &=& \arccos\left(\alpha\beta \mp \sqrt{(1-\alpha^2)(1-\beta^2)}\right)\\
+\arctan\alpha \pm \arctan\beta &=&\arctan\left(\frac{\alpha \pm \beta}{1 \mp \alpha\beta}\right)
+\end{eqnarray}
+
+
+
+\section{Ângulo duplo}
+
+
+\begin{eqnarray}
+\sin 2\theta &=& 2 \sin \theta \cos \theta  = \frac{2 \tan \theta} {1 + \tan^2 \theta} \\
+\cos 2\theta &=& \cos^2 \theta - \sin^2 \theta = 2 \cos^2 \theta - 1 = 1 - 2 \sin^2 \theta = \frac{1 - \tan^2 \theta} {1 + \tan^2 \theta}\\
+\tan 2\theta &=& \frac{2 \tan \theta} {1 - \tan^2 \theta}\\
+\cot 2\theta &=& \frac{\cot^2 \theta - 1}{2 \cot \theta}
+\end{eqnarray}
+
+
+\section{Ângulo Triplo}
+
+
+\begin{eqnarray}
+\sin 3\theta &=& - \sin^3\theta + 3 \cos^2\theta \sin\theta 
+= - 4\sin^3\theta + 3\sin\theta  \\
+\cos 3\theta  &=& \cos^3\theta - 3 \sin^2 \theta\cos \theta =
+4 \cos^3\theta - 3 \cos\theta \\
+\tan 3\theta &=& \frac{3 \tan\theta - \tan^3\theta}{1 - 3 \tan^2\theta}\\
+\cot 3\theta &=& \frac{3 \cot\theta - \cot^3\theta}{1 - 3 \cot^2\theta}
+\end{eqnarray}
+
+
+\section{Meio ângulo}
+
+\begin{eqnarray}
+\sin \frac{\theta}{2} &=& \sgn \left(2 \pi - \theta + 4 \pi \left\lfloor \frac{\theta}{4\pi} \right\rfloor \right) \sqrt{\frac{1 \! - \! \cos \theta}{2}}\\
+\sin^2\frac{\theta}{2} &=& \frac{1-\cos\theta}{2}\\
+\cos \frac{\theta}{2} &=& \sgn \left(\pi + \theta + 4 \pi \left\lfloor \frac{\pi - \theta}{4\pi} \right\rfloor \right) \sqrt{\frac{1 + \cos\theta}{2}}\\
+\cos^2\frac{\theta}{2} &=&\frac{1+\cos\theta}{2}\\
+\tan \frac{\theta}{2} &=& \csc \theta - \cot \theta = \pm\, \sqrt{1 - \cos \theta \over 1 + \cos \theta} = \frac{\sin \theta}{1 + \cos \theta} = \frac{1-\cos \theta}{\sin \theta} \\
+\tan\frac{\eta+\theta}{2} &=& \frac{\sin\eta+\sin\theta}{\cos\eta+\cos\theta} \\
+\tan\left(\frac{\theta}{2} + \frac{\pi}{4}\right) &= &\sec\theta + \tan\theta \\
+\sqrt{\frac{1 - \sin\theta}{1 + \sin\theta}}  &= &\frac{1 - \tan(\theta/2)}{1 + \tan(\theta/2)}\\
+\tan\tfrac{1}{2}\theta  &=& \frac{\tan\theta}{1 + \sqrt{1+\tan^2\theta}} \left(-\tfrac{\pi}{2} < \theta < \tfrac{\pi}{2} \right)\\
+\cot \frac{\theta}{2} & =& \csc \theta + \cot \theta = \pm\, \sqrt{1 + \cos \theta \over 1 - \cos \theta} = \frac{\sin \theta}{1 - \cos \theta} = \frac{1 + \cos \theta}{\sin \theta} 
+\end{eqnarray}
+
+
+\section{Redução de Potência}
+
+\begin{eqnarray}
+\sin^2\theta &=& \frac{1 - \cos 2\theta}{2}\\
+\cos^2\theta &=& \frac{1 + \cos 2\theta}{8}\\
+\sin^2\theta \cos^2\theta &=& \frac{1 - \cos 4\theta}{8}
+\end{eqnarray}
+
+
+\begin{eqnarray}
+\sin^3\theta &=& \frac{3 \sin\theta - \sin 3\theta}{4}\\
+\cos^3\theta &=& \frac{3 \cos\theta + \cos 3\theta}{4}\\
+\sin^3\theta \cos^3\theta &=& \frac{3\sin 2\theta - \sin 6\theta}{32}
+\end{eqnarray}
+
+
+
+\section{Produto para soma}
+\begin{eqnarray}
+2\cos \theta \cos \varphi &=& {{\cos(\theta - \varphi) + \cos(\theta + \varphi)}}\\
+2\sin \theta \sin \varphi &=& {{\cos(\theta - \varphi) - \cos(\theta + \varphi)} }\\
+2\sin \theta \cos \varphi &=& {{\sin(\theta + \varphi) + \sin(\theta - \varphi)} }\\
+2\cos \theta \sin \varphi &=& {{\sin(\theta + \varphi) - \sin(\theta - \varphi)} }\\
+\tan \theta \tan \varphi &=&\frac{\cos(\theta-\varphi)-\cos(\theta+\varphi)}{\cos(\theta-\varphi)+\cos(\theta+\varphi)}
+\end{eqnarray}
+
+
+\section{Soma para Produto}
+\begin{eqnarray}
+\sin \theta \pm \sin \varphi &=& 2 \sin\left( \frac{\theta \pm \varphi}{2} \right) \cos\left( \frac{\theta \mp \varphi}{2} \right)\\
+\cos \theta + \cos \varphi &=& 2 \cos\left( \frac{\theta + \varphi} {2} \right) \cos\left( \frac{\theta - \varphi}{2} \right)\\
+\cos \theta - \cos \varphi &=& -2\sin\left( {\theta + \varphi \over 2}\right) \sin\left({\theta - \varphi \over 2}\right)\\
+\end{eqnarray}
+
+
 
 \end{apendicesenv}
 % ---
