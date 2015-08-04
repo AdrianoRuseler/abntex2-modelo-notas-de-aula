@@ -1,0 +1,22 @@
+\changetocdepth {4}
+\select@language {brazil}
+\select@language {brazil}
+\contentsline {section}{Introdu\IeC {\c c}\IeC {\~a}o}{3}{section*.1}
+\contentsline {section}{\numberline {1}Exemplos de comandos}{4}{section.0.1}
+\contentsline {subsection}{\numberline {1.1}Inserindo c\IeC {\'o}digo fonte}{4}{subsection.0.1.1}
+\contentsline {subsection}{\numberline {1.2}Figuras}{4}{subsection.0.1.2}
+\contentsline {subsection}{\numberline {1.3}Apresentando aquisi\IeC {\c c}\IeC {\~o}es}{4}{subsection.0.1.3}
+\contentsline {subsection}{\numberline {1.4}Margens}{4}{subsection.0.1.4}
+\contentsline {subsection}{\numberline {1.5}Duas colunas}{6}{subsection.0.1.5}
+\contentsline {subsection}{\numberline {1.6}Recuo do ambiente \texttt {citacao}}{6}{subsection.0.1.6}
+\contentsline {section}{\numberline {2}Cabe\IeC {\c c}alhos e rodap\IeC {\'e}s customizados}{6}{section.0.2}
+\contentsline {section}{\numberline {3}Mais exemplos no Modelo Can\IeC {\^o}nico de Trabalhos Acad\IeC {\^e}micos}{7}{section.0.3}
+\contentsline {section}{\numberline {4}Consulte o manual da classe \textsf {abntex2}}{8}{section.0.4}
+\contentsline {section}{Considera\IeC {\c c}\IeC {\~o}es finais}{8}{section*.6}
+\vspace {\cftbeforepartskip }
+\renewcommand *{\cftappendixname }{AP\^ENDICE \space }
+\contentsline {appendix}{\chapternumberline {A}Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula ac pretium ante justo a nulla curabitur tristique arcu eu metus}{9}{appendix.A}
+\cftinsert {AAA}
+\cftinsert {AAA}
+\renewcommand *{\cftappendixname }{ANEXO \space }
+\contentsline {appendix}{\chapternumberline {A}Datasheet para o conjunto inversor monof\IeC {\'a}sico SPCIM 450-60-20}{10}{appendix.anexochapback.1}
