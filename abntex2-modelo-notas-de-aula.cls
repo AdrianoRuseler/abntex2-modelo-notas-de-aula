@@ -1,5 +1,5 @@
 %%
-%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para a Universidade XXXX
+%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para a Universidade Federal de Santa Catarina
 %%
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3
@@ -205,7 +205,7 @@
 %----------------------------------------------------------------------------------------
 
 \textsc{\LARGE Universidade Federal}\\[0.5cm] % Name of your university/college
-\textsc{\LARGE de Santa Catarina}\\[1.5cm] % Name of your university/college
+\textsc{\LARGE de Santa Catarina}\\[1cm] % Name of your university/college
 \textsc{\Large \imprimircentro }\\[0.5cm] % Major heading such as course name
 \textsc{\large \imprimirdepartamento}\\[1.5cm] % Minor heading such as course title
 
@@ -222,7 +222,9 @@
 %	TOPIC SECTION
 %----------------------------------------------------------------------------------------
 
-{ \Large \bfseries \imprimirtitulo} \\[1.5cm] % Title of your document
+{ \Large \bfseries \imprimirtitulo} \\[0.5cm] % Title of your document
+
+\emph{\imprimirpreambulo}\\[1.0cm]
 
 
 %----------------------------------------------------------------------------------------
@@ -241,11 +243,11 @@
 		\emph{Semestre:} \\
 		\imprimirsemestre
 	\end{flushright}
-\end{minipage}\\[3cm]
+\end{minipage}\\[2cm]
 
 % If you don't want a supervisor, uncomment the two lines below and remove the section above
 %\Large \emph{Author:}\\
-%John \textsc{Smith}\\[3cm] % Your name
+%John \textsc{Smith}\\[2cm] % Your name
 
 %----------------------------------------------------------------------------------------
 %	DATE SECTION
